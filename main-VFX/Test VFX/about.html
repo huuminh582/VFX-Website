@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới Thiệu | VFX là gì?</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        
+
+        * {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        /* Header */
+        /* CSS tùy chỉnh cho header Bootstrap */
+        .navbar {
+            /* background: linear-gradient(to right, #e6f3eb, #ffffff); */
+            background-color: white;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            margin: 0;
+            padding: 10px 0; /* Tăng padding trên/dưới để navbar cao hơn */
+        }
+
+        .navbar-brand img {
+            height: 60px; /* Tăng kích thước logo */
+            width: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar-brand:hover img {
+            transform: scale(1.05);
+        }
+
+        .logo-text {
+            margin-left: 16px; /* Tăng khoảng cách giữa logo và chữ */
+            border-left: 2px solid #f5b53f;
+            padding-left: 16px;
+        }
+
+        .logo-text h1 {
+            font-size: 1.3rem; /* Tăng kích thước chữ tiêu đề */
+            font-weight: 700;
+            color: #f5b53f;
+            margin: 0;
+            line-height: 1.2;
+            letter-spacing: 0.5px;
+        }
+
+        .logo-text p {
+            font-size: 0.9rem; /* Tăng kích thước chữ phụ */
+            color: #f5b53f;
+            margin: 0;
+            letter-spacing: 0.3px;
+        }
+
+        .navbar-nav .nav-item {
+            margin-right: 25px; /* Tăng khoảng cách giữa các mục menu */
+        }
+
+        .navbar-nav .nav-link {
+            color: black;
+            font-weight: 500;
+            padding: 12px 24px; /* Tăng padding để mục menu lớn hơn */
+            border-radius: 30px;
+            transition: all 0.3s;
+            font-size: 1.0rem; /* Tăng kích thước chữ của menu */
+            letter-spacing: 0.3px;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: black;
+            background-color: rgba(245, 181, 63, 0.1);
+        }
+
+        .navbar-nav .nav-link.active {
+            color: black;
+            /* background-color: #f5b53f; */
+            background: linear-gradient(to right, rgba(244, 213, 80, 1), rgba(178, 120, 13, 1));
+            font-weight: 600;
+        }
+
+        .account-button {
+            background-color: transparent;
+            color: black;
+            padding: 10px 20px; /* Tăng padding để nút lớn hơn */
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 1.5px solid #f5b53f;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.3px;
+            font-size: 0.9rem; /* Tăng kích thước chữ của nút */
+        }
+
+        .account-button:hover {
+            /* background-color: #f5b53f; */
+            background: linear-gradient(to right, rgba(244, 213, 80, 1), rgba(178, 120, 13, 1));
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(245, 181, 63, 0.2);
+        }
+
+        .account-button i {
+            margin-right: 8px;
+            font-size: 1rem; /* Tăng kích thước icon */
+        }
+
+        @media (max-width: 991px) {
+            .logo-text {
+                display: none;
+            }
+
+            .navbar-nav .nav-item {
+                margin-right: 0;
+                margin-bottom: 12px; /* Tăng khoảng cách dọc ở chế độ mobile */
+            }
+
+            .navbar-nav .nav-link {
+                font-size: 1rem; /* Giảm nhẹ kích thước chữ ở mobile */
+                padding: 10px 20px;
+            }
+
+            .account-button {
+                font-size: 0.9rem; /* Giảm nhẹ kích thước chữ ở mobile */
+                padding: 8px 16px;
+            }
+        }
+
+        /* Founding Team Section - New Design */
+        .founding-team {
+            padding: 80px 0;
+            /* background-color: #f9f9f9; */
+            background-color: #027A5614;
+            position: relative;
+        }
+
+        .greeting1 {
+            display: block;
+            width: fit-content;
+            padding: 8px 25px;
+            border: none;
+            border-radius: 30px;
+            margin: 0 auto 20px;
+            font-size: 1rem;
+            color: white;
+            background: linear-gradient(to right, rgba(244, 213, 80, 1), rgba(178, 120, 13, 1));
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(242, 201, 76, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .founding-team h2{
+            font-weight: bold;
+        }
+
+        .team-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .team-member-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            text-align: center;
+            
+        }
+
+        .team-member-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .member-title {
+            color: #000;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .team-member-description {
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .member-image-container {
+            width: 100%;
+            padding-top: 100%; /* 1:1 Aspect Ratio */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .member-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .team-member-card:hover .member-image {
+            transform: scale(1.05);
+        }
+
+        .member-info {
+            padding: 20px;
+            background: white;
+        }
+
+        .member-name {
+            color: var(--dark-green);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .member-position {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .member-description {
+            color: #444;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-link {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: #F2C94C;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background-color: #E0B83C;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 991px) {
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .member-name {
+                font-size: 1.3rem;
+            }
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color:#012D21;
+            color: white;
+            padding: 40px 0 20px;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            max-width: 150px;
+            margin-bottom: 20px;
+        }
+
+        .footer-description {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .footer-heading {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--light-gold);
+        }
+
+        .footer-contact {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .footer-contact i {
+            color: var(--light-gold);
+            font-size: 1.1rem;
+            margin-top: 4px;
+        }
+
+        .footer-contact-text {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .footer-social a {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background: var(--light-gold);
+            color: var(--dark-green);
+            transform: translateY(-3px);
+        }
+
+        .footer-app-downloads {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .app-download-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .app-download-btn:hover {
+            background: var(--light-gold);
+            color: var(--dark-green);
+        }
+
+        .app-download-btn img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .footer-copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 991px) {
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .footer-app-downloads {
+                flex-direction: row;
+                justify-content: flex-start;
+            }
+        }
+           
+    </style>
+    </head>
+
+    <body>
+        <!-- Header Section -->
+        <header>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid px-4"> <!-- Thay container bằng container-fluid để trải rộng toàn chiều ngang -->
+                    <a class="navbar-brand d-flex align-items-center" href="index.html">
+                        <img src="./img/index/logoVFX.png" alt="VFX Logo">
+                        <div class="logo-text">
+                            <h1>Sàn Gọi Vốn Việt Nam</h1>
+                            <p>Vietnam Fundraising Exchange</p>
+                        </div>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link " href="index.html">Trang Chủ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="about.html">Đội Ngũ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="">Dịch Vụ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="">Dự Án</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="">Tin Tức</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="">Liên Hệ</a>
+                            </li>
+                        </ul>
+                        <a href="login.html" class="account-button ms-lg-3">
+                            <i class="fas fa-user"></i> Tài Khoản
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <section class="founding-team">
+            <div class="team-container">
+                <div class="greeting1">VFX</div>
+                <h2 class="text-center mb-4">Đội ngũ sáng lập và điều hành </h2>
+                
+                <div class="team-grid">
+                    <!-- Team Member 1 -->
+                    <div class="team-member-card">
+                        <div class="member-image-container">
+                            <img src="https://cdn.metadap.io/assets/2e94949e-0df6-4536-bf3e-5681edb5c87f/mk9hvrprle7sm2vaxfxr.jpg" 
+                                 alt="Ts. Trần Quý" 
+                                 class="member-image">
+                        </div>
+                        <div class="member-info">
+                            <h3 class="member-name">Ts. Trần Quý</h3>
+                            <p class="member-title">Co-Founder | Chủ tịch HĐQT</p>
+                            <p class="member-description">Chuyên gia Kinh tế số, Chuyên gia về Doanh nghiệp | Đào tạo, huấn luyện lãnh đạo cấp cao.</p>
+                            <div class="social-links">
+                                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Team Member 2 -->
+                    <div class="team-member-card">
+                        <div class="member-image-container">
+                            <img src="./img/doi_ngu_chuyen_gia/Ms MARY BÙI.jpg" 
+                                 alt="Member 2" 
+                                 class="member-image">
+                        </div>
+                        <div class="member-info">
+                            <h3 class="member-name">Ms MARY BÙI</h3>
+                            <p class="member-title">Founder | Tổng giám đốc</p>
+                            <p class="member-description">Chuyên gia Khởi nghiệp đổi mới sáng tạo | Mô hình, Chiến lược kinh doanh | Quản trị</p>
+                            <div class="social-links">
+                                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Team Member 3 -->
+                    <div class="team-member-card">
+                        <div class="member-image-container">
+                            <img src="https://vfx.com.vn/wp-content/uploads/2024/07/12.png" 
+                                 alt="Member 3" 
+                                 class="member-image">
+                        </div>
+                        <div class="member-info">
+                            <h3 class="member-name">Mr LÊ VIẾT DŨNG LINH</h3>
+                            <p class="member-title">Co - Founder | GĐ Khối Tài chính</p>
+                            <p class="member-description">Chuyên Gia Kinh tế số, Chuyên đổi số Doanh nghiệp | Đào tạo, huấn luyện lãnh đạo cấp cao.</p>
+                            <div class="social-links">
+                                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Team Member 4 -->
+                    <div class="team-member-card">
+                        <div class="member-image-container">
+                            <img src="https://vfx.com.vn/wp-content/uploads/2024/07/13.png" 
+                                 alt="Member 4" 
+                                 class="member-image">
+                        </div>
+                        <div class="member-info">
+                            <h3 class="member-name">Ms HOÀNG THỊ THANH HẰNG</h3>
+                            <p class="member-title">Co - Founder | GĐ Khối Truyền thông</p>
+                            <p class="member-description">Chuyên gia Truyền thông, Thương hiệu</p>
+                            <div class="social-links">
+                                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Team Member 5 -->
+                    <div class="team-member-card">
+                        <div class="member-image-container">
+                            <img src="https://vfx.com.vn/wp-content/uploads/2024/07/14.png" 
+                                 alt="Member 5" 
+                                 class="member-image">
+                        </div>
+                        <div class="member-info">
+                            <h3 class="member-name">Mr LÊ THANH TUẤN</h3>
+                            <p class="member-title">GĐ Khối Công nghệ</p>
+                            <p class="member-description">Chuyên gia Công nghệ</p>
+                            <div class="social-links">
+                                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Team Member 6 -->
+                    <div class="team-member-card">
+                        <div class="member-image-container">
+                            <img src="path/to/member6.jpg" 
+                                 alt="Member 6" 
+                                 class="member-image">
+                        </div>
+                        <div class="member-info">
+                            <h3 class="member-name">Ms THẢO</h3>
+                            <p class="member-title">GĐ Khối Văn phòng</p>
+                            <p class="member-description">Chuyên gia hành chính, nhân sự & tổ chức sự kiện.</p>
+                            <div class="social-links">
+                                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    
+            </main>
+    
+            <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <!-- Company Info -->
+                <div>
+                    <img src="https://vfx.com.vn/wp-content/uploads/2024/07/Logo-VFX-1-768x768.png" alt="VFX Logo" class="footer-logo">
+                    <p class="footer-description">
+                        VFX - Nền tảng gọi vốn thông minh, kết nối nhà đầu tư với các dự án tiềm năng.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Menu Links -->
+                <div>
+                    <h4 class="footer-heading">Về chúng tôi</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Giới thiệu</a></li>
+                        <li><a href="#">Dịch vụ</a></li>
+                        <li><a href="#">Dự án</a></li>
+                        <li><a href="#">Tin tức</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="footer-heading">Thông tin liên hệ</h4>
+                    <div class="footer-contact">
+                        <i class="fas fa-phone"></i>
+                        <p class="footer-contact-text">Hotline: 035 510 8888</p>
+                    </div>
+                    <div class="footer-contact">
+                        <i class="fas fa-envelope"></i>
+                        <p class="footer-contact-text">Email: example@gmail.com</p>
+                    </div>
+                    <div class="footer-contact">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p class="footer-contact-text">Địa chỉ: 135 Pasteur, P.Võ Thị Sáu, Q.3, TP Hồ Chí Minh</p>
+                    </div>
+                </div>
+
+                <!-- Download Apps -->
+                <div>
+                    <h4 class="footer-heading">Download App</h4>
+                    <div class="footer-app-downloads">
+                        <a href="#" class="app-download-btn">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/App_Store_%28iOS%29.svg/2048px-App_Store_%28iOS%29.svg.png" alt="App Store">
+                            <span>Download on App Store</span>
+                        </a>
+                        <a href="#" class="app-download-btn">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Google_Play_Arrow_logo.svg/1024px-Google_Play_Arrow_logo.svg.png" alt="Google Play">
+                            <span>Download on Google Play</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-copyright">
+                Copyright © 2024 VFX. All rights reserved
+            </div>
+        </div>
+    </footer>
+    
+            <script async defer src="https://www.uchat.com.au/js/widget/knvcidogttiuekfe/float.js"></script>
+    
+        <!-- Bootstrap JS Bundle -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css" rel="stylesheet">

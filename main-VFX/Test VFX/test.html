@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đối Tác Chiến Lược</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .partners-section {
+            padding: 40px 0;
+            border-top: 0.5px solid #e5e5e5;
+            border-bottom: 1px solid #e5e5e5;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .section-title-wrapper {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .section-title {
+            display: inline-block;
+            padding: 8px 50px;
+            font-weight: 600;
+            color: #333;
+            font-size: 16px;
+            background-color: #f0c14b;
+            border-radius: 30px;
+            text-transform: uppercase;
+        }
+        
+        .partners-container {
+            position: relative;
+            
+            overflow: hidden;
+            
+        }
+        
+        .partners-track {
+            display: flex;
+            animation: scroll 30s linear infinite;
+            width: calc(200px * 12);
+        }
+        
+        .partner-logo {
+            width: 200px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .partner-logo img {
+            max-width: 100%;
+            max-height: 50px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+        
+        .partner-logo:hover img {
+            transform: scale(1.05);
+        }
+        
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-200px * 6));
+            }
+        }
+        
+        /* Hiệu ứng gradient ở hai bên */
+        .partners-container::before,
+        .partners-container::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 80px;
+            height: 100%;
+            z-index: 2;
+        }
+        
+        .partners-container::before {
+            left: 0;
+            background: linear-gradient(to right, #f7f7f7 0%, rgba(247, 247, 247, 0) 100%);
+        }
+        
+        .partners-container::after {
+            right: 0;
+            background: linear-gradient(to left, #f7f7f7 0%, rgba(247, 247, 247, 0) 100%);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .partner-logo {
+                width: 160px;
+            }
+            @keyframes scroll {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(calc(-160px * 6));
+                }
+            }
+            .partners-track {
+                width: calc(160px * 12);
+            }
+            .partners-container {
+                max-width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="benefits-container">
+            <div class="greeting1">VFX</div>
+            <h2>Lợi ích cho nhà đầu tư</h2>
+            <p class="subtitle">Lorem ipsum dolor sit amet consectetur. Etiam nec morbi ipsum parturient.</p>
+            
+            <div id="benefitsCarousel" class="carousel slide benefits-slider" data-bs-ride="carousel" data-bs-interval="5000">
+                <div class="carousel-inner">
+                    <!-- First Slide -->
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <!-- Benefit Card 1 -->
+                            <div class="col-md-4 mb-4">
+                                <div class="benefit-card">
+                                    <div class="benefit-icon">
+                                        <img src="https://img.freepik.com/free-photo/standard-quality-control-concept-m_23-2150041859.jpg?ga=GA1.1.1401665435.1741148428&semt=ais_hybrid&w=740" alt="Đa dạng hấp dẫn">
+                                    </div>
+                                    <h3 class="benefit-title">ĐA DẠNG, HẤP DẪN</h3>
+                                    <p class="benefit-desc">Danh mục đầu tư đa dạng, lựa chọn. Startup có tiềm năng tăng trưởng mạnh, thị trường lớn, lợi nhuận kỳ vọng cao, quan trọng là khả năng thực thi tốt, được hỗ trợ toàn diện để phát triển.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Benefit Card 2 -->
+                            <div class="col-md-4 mb-4">
+                                <div class="benefit-card">
+                                    <div class="benefit-icon">
+                                        <img src="https://img.freepik.com/free-photo/representation-user-experience-interface-design_23-2150169850.jpg?ga=GA1.1.1401665435.1741148428&semt=ais_hybrid&w=740" alt="Thoái vốn linh hoạt">
+                                    </div>
+                                    <h3 class="benefit-title">THOÁI VỐN LINH HOẠT</h3>
+                                    <p class="benefit-desc">Dễ dàng thoái vốn ở các vòng tiếp theo, cơ chế thoái vốn linh hoạt, nhiều lựa chọn.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Benefit Card 3 -->
+                            <div class="col-md-4 mb-4">
+                                <div class="benefit-card">
+                                    <div class="benefit-icon">
+                                        <img src="https://img.freepik.com/free-photo/man-using-smartphone-work-connect-with-others_23-2149369108.jpg?ga=GA1.1.1401665435.1741148428&semt=ais_hybrid&w=740" alt="Thanh khoản dễ dàng">
+                                    </div>
+                                    <h3 class="benefit-title">THANH KHOẢN DỄ DÀNG</h3>
+                                    <p class="benefit-desc">Cơ chế  hỗ trợ thanh khoản nhanh, dễ dàng.(Giao dịch vốn, cổ phiếu trên sàn VSX)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Second Slide -->
+                    <div class="carousel-item">
+                        <div class="row">
+                            <!-- Benefit Card 4 -->
+                            <div class="col-md-4 mb-4">
+                                <div class="benefit-card">
+                                    <div class="benefit-icon">
+                                        <img src="https://img.freepik.com/free-photo/3d-cryptocurrency-rendering-design_23-2149074561.jpg?ga=GA1.1.1401665435.1741148428&semt=ais_hybrid&w=740" alt="Minh bạch thông tin">
+                                    </div>
+                                    <h3 class="benefit-title">MINH BẠCH</h3>
+                                    <p class="benefit-desc">Các thông tin về hoạt động kinh doanh, sử dụng vốn sau khi nhận đầu tư của dự án..</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Benefit Card 5 -->
+                            <div class="col-md-4 mb-4">
+                                <div class="benefit-card">
+                                    <div class="benefit-icon">
+                                        <img src="https://img.freepik.com/free-photo/representation-user-experience-interface-design_23-2150169850.jpg?ga=GA1.1.1401665435.1741148428&semt=ais_hybrid&w=740" alt="Cộng đồng đầu tư">
+                                    </div>
+                                    <h3 class="benefit-title">KHÁCH QUAN</h3>
+                                    <p class="benefit-desc">Với sự tham gia, phối hợp của nhiều bên, sử dụng nền tảng công nghệ quản lý tránh các rủi ro bị thao túng, chi phối, lợi dụng ...</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Benefit Card 6 -->
+                            <div class="col-md-4 mb-4">
+                                <div class="benefit-card">
+                                    <div class="benefit-icon">
+                                        <img src="https://i.pinimg.com/736x/44/f6/3a/44f63ae73f159f09869962cbea43b56f.jpg" alt="Ưu đãi thuế">
+                                    </div>
+                                    <h3 class="benefit-title">CỘNG ĐỒNG NHÀ ĐẦU TƯ CHẤT LƯỢNG</h3>
+                                    <p class="benefit-desc">Investor Forum, Investor Profestional Council...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+    <section class="partners-section">
+        <div class="container">
+            <div class="section-title-wrapper">
+                <h2 class="section-title">ĐỐI TÁC CHIẾN LƯỢC</h2>
+            </div>
+            
+            <div class="partners-container">
+                <div class="partners-track">
+                    <!-- Logo đối tác - mỗi logo xuất hiện 2 lần để tạo hiệu ứng liên tục -->
+                    <div class="partner-logo">
+                        <img src="/api/placeholder/160/50" alt="VIFM" />
+                    </div>
+                    <div class="partner-logo">
+                        <img src="/api/placeholder/160/50" alt="Investpush Legal" />
+                    </div>
+                    <div class="partner-logo">
+                        <img src="/api/placeholder/160/50" alt="ACB" />
+                    </div>
+                    <div class="partner-logo">
+                        <img src="/api/placeholder/160/50" alt="VietQR" />
+                    </div>
+                    <div class="partner-logo">
+                        <img src="/api/placeholder/160/50" alt="Đảng Cộng Sản Việt Nam" />
+                    </div>
+                    <div class="partner-logo">
+                        <img src="/api/placeholder/160/50" alt="VDCA" />
+                    </div>
+                    
+                    <!-- Nhân đôi logo để tạo hiệu ứng liên tục -->
+                    <div class="partner-logo">
+                        <img src="/api/placeholder/160/50" alt="VIFM" />
+                    </div>
+                    <div class="partner-logo">
+                        <img src="/api/placeholder/160/50" alt="Investpush Legal" />
+                    </div>
+                    <div class="partner-logo">
+                        <img src="/api/placeholder/160/50" alt="ACB" />
+                    </div>
+                    <div class="partner-logo">
+                        <img src="/api/placeholder/160/50" alt="VietQR" />
+                    </div>
+                    <div class="partner-logo">
+                        <img src="/api/placeholder/160/50" alt="Đảng Cộng Sản Việt Nam" />
+                    </div>
+                    <div class="partner-logo">
+                        <img src="/api/placeholder/160/50" alt="VDCA" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Tạm dừng animation khi hover
+        document.querySelector('.partners-track').addEventListener('mouseenter', function() {
+            this.style.animationPlayState = 'paused';
+        });
+        
+        document.querySelector('.partners-track').addEventListener('mouseleave', function() {
+            this.style.animationPlayState = 'running';
+        });
+    </script>
+</body>
+</html>

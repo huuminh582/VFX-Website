@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dịch Vụ Đầu Tư | Hình Thức Gọi Vốn & Lợi Ích</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #d4a017;
+            --primary-dark: #b58a13;
+            --primary-light: #f3c045;
+            --white: #ffffff;
+            --dark: #333333;
+            --light-gray: #f9f9f9;
+        }
+
+        * {
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+        }
+
+        /* Header */
+        /* CSS tùy chỉnh cho header Bootstrap */
+        .navbar {
+            /* background: linear-gradient(to right, #e6f3eb, #ffffff); */
+            background-color: white;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            margin: 0;
+            padding: 10px 0; /* Tăng padding trên/dưới để navbar cao hơn */
+        }
+
+        .navbar-brand img {
+            height: 60px; /* Tăng kích thước logo */
+            width: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar-brand:hover img {
+            transform: scale(1.05);
+        }
+
+        .logo-text {
+            margin-left: 16px; /* Tăng khoảng cách giữa logo và chữ */
+            border-left: 2px solid #f5b53f;
+            padding-left: 16px;
+        }
+
+        .logo-text h1 {
+            font-size: 1.3rem; /* Tăng kích thước chữ tiêu đề */
+            font-weight: 700;
+            color: #f5b53f;
+            margin: 0;
+            line-height: 1.2;
+            letter-spacing: 0.5px;
+        }
+
+        .logo-text p {
+            font-size: 0.9rem; /* Tăng kích thước chữ phụ */
+            color: #f5b53f;
+            margin: 0;
+            letter-spacing: 0.3px;
+        }
+
+        .navbar-nav .nav-item {
+            margin-right: 25px; /* Tăng khoảng cách giữa các mục menu */
+        }
+
+        .navbar-nav .nav-link {
+            color: black;
+            font-weight: 500;
+            padding: 12px 24px; /* Tăng padding để mục menu lớn hơn */
+            border-radius: 30px;
+            transition: all 0.3s;
+            font-size: 1.0rem; /* Tăng kích thước chữ của menu */
+            letter-spacing: 0.3px;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: black;
+            background-color: rgba(245, 181, 63, 0.1);
+        }
+
+        .navbar-nav .nav-link.active {
+            color: black;
+            /* background-color: #f5b53f; */
+            background: linear-gradient(to right, rgba(244, 213, 80, 1), rgba(178, 120, 13, 1));
+            font-weight: 600;
+        }
+
+        .account-button {
+            background-color: transparent;
+            color: black;
+            padding: 10px 20px; /* Tăng padding để nút lớn hơn */
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 1.5px solid #f5b53f;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.3px;
+            font-size: 0.9rem; /* Tăng kích thước chữ của nút */
+        }
+
+        .account-button:hover {
+            /* background-color: #f5b53f; */
+            background: linear-gradient(to right, rgba(244, 213, 80, 1), rgba(178, 120, 13, 1));
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(245, 181, 63, 0.2);
+        }
+
+        .account-button i {
+            margin-right: 8px;
+            font-size: 1rem; /* Tăng kích thước icon */
+        }
+
+        @media (max-width: 991px) {
+            .logo-text {
+                display: none;
+            }
+
+            .navbar-nav .nav-item {
+                margin-right: 0;
+                margin-bottom: 12px; /* Tăng khoảng cách dọc ở chế độ mobile */
+            }
+
+            .navbar-nav .nav-link {
+                font-size: 1rem; /* Giảm nhẹ kích thước chữ ở mobile */
+                padding: 10px 20px;
+            }
+
+            .account-button {
+                font-size: 0.9rem; /* Giảm nhẹ kích thước chữ ở mobile */
+                padding: 8px 16px;
+            }
+        }
+        
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+        
+        .section-subtitle {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+        
+        .gold-bg {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .white-bg {
+            background-color: white;
+        }
+        
+        .light-bg {
+            background-color: var(--light-gray);
+        }
+        
+        /* Funding Types Section */
+        .funding-types .service-item {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .funding-types .service-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .icon-wrapper {
+            width: 80px;
+            height: 80px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .icon-wrapper i {
+            font-size: 32px;
+            color: white;
+        }
+        
+        .service-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .service-description {
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        /* Funding Models Section */
+        .model-card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+        
+        .model-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .model-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        
+        .model-icon {
+            width: 70px;
+            height: 70px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+        
+        .model-icon i {
+            font-size: 28px;
+            color: white;
+        }
+        
+        .model-detail {
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+        
+        .model-detail strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        /* Benefits Section */
+        .benefits-section {
+            position: relative;
+        }
+        
+        .benefit-box {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+        
+        .benefit-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .benefit-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            color: var(--primary-dark);
+        }
+        
+        .benefit-list {
+            padding-left: 20px;
+        }
+        
+        .benefit-list li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 15px;
+        }
+        
+        .benefit-list li:before {
+            content: "•";
+            color: var(--primary-color);
+            font-weight: bold;
+            display: inline-block;
+            width: 15px;
+            margin-left: -15px;
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Responsive */
+        @media (max-width: 991.98px) {
+            .section {
+                padding: 60px 0;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .section-subtitle {
+                font-size: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 767.98px) {
+            .section {
+                padding: 40px 0;
+            }
+            
+            .model-card, .service-item, .benefit-box {
+                margin-bottom: 20px;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+                margin-bottom: 30px;
+            }
+        }
+
+        .footer {
+            /* background-color: #0a3624;  */
+            background-color:#012D21;
+            /* color: black; */
+            padding: 40px 0 20px;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5);
+
+        }
+        
+        .footer-logo img {
+            max-width: 150px;
+            margin-bottom: 10px;
+        }
+        
+        .footer-slogan {
+            color: white;
+            font-size: 14px;
+            margin-top: 5px;
+            
+        }
+        
+        .footer h5 {
+            color: white;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .footer-menu ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .footer-menu ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-menu ul li a {
+            color: rgb(183, 182, 182);
+            text-decoration: none;
+        }
+        
+        .footer-menu ul li a:hover {
+            color: #ffd700;
+        }
+        
+        .footer-contact p {
+            margin-bottom: 10px;
+            color: rgb(183, 182, 182);
+        }
+        
+        .footer-social a {
+            color: white;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+        
+        .footer-social a:hover {
+            color: #ffd700;
+        }
+        
+        .footer-download img {
+            width: 60px;
+            margin-bottom: 10px;
+            margin-left: 50px;
+        }
+        
+        .footer-copyright {
+            border-top: 1px solid black;
+            padding-top: 20px;
+            margin-top: 20px;
+            font-size: 14px;    
+        }
+
+        .footer-copyright p{
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .footer-section {
+                margin-bottom: 30px;
+            }
+            
+            .footer-logo {
+                text-align: center;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid px-4"> <!-- Thay container bằng container-fluid để trải rộng toàn chiều ngang -->
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="./img/index/logoVFX.png" alt="VFX Logo">
+                    <div class="logo-text">
+                        <h1>Sàn Gọi Vốn Việt Nam</h1>
+                        <p>Vietnam Fundraising Exchange</p>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="">Trang Chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">Thành Viên</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Dịch Vụ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Dự Án</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Tin Tức</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Liên Hệ</a>
+                        </li>
+                    </ul>
+                    <a href="login.html" class="account-button ms-lg-3">
+                        <i class="fas fa-user"></i> Tài Khoản
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Banner/Hero Section -->
+    <section class="gold-bg py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h1 class="display-4 fw-bold mb-4">HÌNH THỨC GỌI VỐN</h1>
+                    <p class="lead mb-0">Giải pháp đầu tư toàn diện cho Nhà đầu tư và Doanh nghiệp</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Funding Types Section -->
+    <section class="section light-bg funding-types">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h2 class="section-title">PHIÊN GIAO DỊCH VỐN</h2>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="service-item">
+                        <div class="d-flex align-items-center">
+                            <div class="icon-wrapper">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <div class="ms-4">
+                                <h3 class="service-title">Trực Tiếp</h3>
+                                <p class="service-description">Sự kiện tại địa điểm cụ thể.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="service-item">
+                        <div class="d-flex align-items-center">
+                            <div class="icon-wrapper">
+                                <i class="fas fa-laptop"></i>
+                            </div>
+                            <div class="ms-4">
+                                <h3 class="service-title">Trực Tuyến</h3>
+                                <p class="service-description">Sự kiện trên môi trường ảo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-12">
+                    <h2 class="section-title">NỀN TẢNG GỌI VỐN</h2>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="service-item">
+                        <div class="d-flex align-items-center">
+                            <div class="icon-wrapper">
+                                <i class="fas fa-user-shield"></i>
+                            </div>
+                            <div class="ms-4">
+                                <h3 class="service-title">Fundraising Private</h3>
+                                <p class="service-description">Nền tảng hỗ trợ gọi vốn theo yêu cầu.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="service-item">
+                        <div class="d-flex align-items-center">
+                            <div class="icon-wrapper">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="ms-4">
+                                <h3 class="service-title">Crowdfunding</h3>
+                                <p class="service-description">Nền tảng gây quỹ cộng đồng.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Funding Models Section -->
+    <section class="section white-bg">
+        <div class="container">
+            <h2 class="section-title mb-5">HÌNH THỨC GỌI VỐN</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="model-card">
+                        <div class="model-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3 class="model-title">PRIVATE</h3>
+                        
+                        <div class="model-detail">
+                            <strong>Đối tượng NĐT:</strong> Chuyên nghiệp (Cá nhân/Tổ chức).
+                        </div>
+                        
+                        <div class="model-detail">
+                            <strong>Số lượng NĐT tham gia:</strong> Tối đa 20 NĐT.
+                        </div>
+                        
+                        <div class="model-detail">
+                            <strong>Mức vốn đầu tư tối thiểu:</strong> Trên 200 triệu đồng/NĐT/
+                        </div>
+                        
+                        <div class="model-detail">
+                            <strong>Mức vốn Gọi:</strong> Từ 100.000 đến 500.000$/Dự án
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="model-card">
+                        <div class="model-icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <h3 class="model-title">FUND</h3>
+                        
+                        <div class="model-detail">
+                            <strong>Đối tượng NĐT:</strong> Quỹ đổi mới sáng tạo, Thiên thần, Mạo hiểm...
+                        </div>
+                        
+                        <div class="model-detail">
+                            <strong>Số lượng:</strong> Tối đa 5 Quỹ/Phiên.
+                        </div>
+                        
+                        <div class="model-detail">
+                            <strong>Mức vốn đầu tư tối thiểu:</strong> 200.000$/Quỹ
+                        </div>
+                        
+                        <div class="model-detail">
+                            <strong>Mức vốn Gọi:</strong> Trên 1.000.000$/Dự án
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="model-card">
+                        <div class="model-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <h3 class="model-title">CROWNFUNDING</h3>
+                        
+                        <div class="model-detail">
+                            <strong>Đối tượng NĐT:</strong> Cá nhân
+                        </div>
+                        
+                        <div class="model-detail">
+                            <strong>Số lượng NĐT tham gia:</strong> Không hạn chế
+                        </div>
+                        
+                        <div class="model-detail">
+                            <strong>Mức vốn đầu tư tối thiểu:</strong> Theo quy định của từng dự án.
+                        </div>
+                        
+                        <div class="model-detail">
+                            <strong>Mức gọi tối đa:</strong> Không giới hạn
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="section gold-bg benefits-section">
+        <div class="container">
+            <h2 class="section-title mb-5">LỢI ÍCH DÀNH CHO NHÀ ĐẦU TƯ</h2>
+            
+            <div class="row g-4 mb-5">
+                <div class="col-md-6">
+                    <div class="benefit-box">
+                        <h3 class="benefit-title">ĐA DẠNG, HẤP DẪN</h3>
+                        <ul class="benefit-list">
+                            <li>Danh mục đầu tư, nhiều sự lựa chọn</li>
+                            <li>Startup có tiềm năng tăng trưởng mạnh, thị trường lớn, lợi nhuận kỳ vọng cao</li>
+                            <li>Quan trọng là khả năng thực thi tốt, được hỗ trợ toàn diện để phát triển</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="benefit-box">
+                        <h3 class="benefit-title">THOÁI VỐN LINH HOẠT</h3>
+                        <ul class="benefit-list">
+                            <li>Dễ dàng thoái vốn ở các vòng tiếp theo</li>
+                            <li>Cơ chế thoái vốn linh hoạt, nhiều lựa chọn</li>
+                            <li>Thanh khoản dễ dàng (Giao dịch vốn, cổ phiếu trên sàn VSX)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row g-4 mb-5">
+                <div class="col-md-6">
+                    <div class="benefit-box">
+                        <h3 class="benefit-title">MINH BẠCH</h3>
+                        <ul class="benefit-list">
+                            <li>Các thông tin về hoạt động kinh doanh, sử dụng vốn sau khi nhận đầu tư của dự án</li>
+                        </ul>
+                        
+                        <h3 class="benefit-title mt-4">KHÁCH QUAN</h3>
+                        <ul class="benefit-list">
+                            <li>Với sự tham gia, phối hợp của nhiều bên, sử dụng nền tảng công nghệ quản lý tránh các rủi ro bị thao túng, chi phối, lợi dụng</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="benefit-box">
+                        <h3 class="benefit-title">CỘNG ĐỒNG NHÀ ĐẦU TƯ CHẤT LƯỢNG</h3>
+                        <ul class="benefit-list">
+                            <li>Investor Forum, Investor Professional Council...)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="benefit-box">
+                        <h3 class="benefit-title">QUẢN TRỊ VỐN ĐẦU TƯ, RỦI RO TỐI THIỂU</h3>
+                        <ul class="benefit-list">
+                            <li>Dự án chất lượng: Đầu vào được tuyển chọn, thẩm định, đánh giá và định giá dự án trước khi tham gia sàn giao dịch VFX.</li>
+                            <li>Hiệu quả sử dụng vốn cao: Các dịch vụ bổ trợ từ VFX và các đối tác trong Hệ sinh thái đảm bảo startup sử dụng vốn tối ưu và hiệu quả kinh doanh cao => đảm bảo tăng trưởng kỳ vọng.</li>
+                            <li>Toàn diện: Các dịch vụ đảm bảo, hỗ trợ quản lý vốn/danh mục đầu tư.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="benefit-box">
+                        <h3 class="benefit-title">LỢI NHUẬN TỐI ƯU</h3>
+                        <ul class="benefit-list">
+                            <li>Tỷ lệ đầu tư thành công cao, với lợi nhuận kỳ vọng lớn.</li>
+                            <li>Ưu tiên khi tiếp tục đầu tư ở các vòng gọi vốn tiếp theo.</li>
+                            <li>Cơ hội tiếp cận các cơ hội, giá trị gia tăng khác.</li>
+                        </ul>
+                        
+                        <h3 class="benefit-title mt-4">NÂNG CẤP NĂNG LỰC ĐẦU TƯ</h3>
+                        <ul class="benefit-list">
+                            <li>Qua tiếp xúc, học hỏi, đồng hành cùng với các Quỹ, NĐT chuyên nghiệp.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Logo and Slogan -->
+                <div class="col-lg-3 col-md-6 footer-section">
+                    <div class="footer-logo">
+                        <img src="./img/index/logoVFX.png" alt="Fundraising eXchange Logo">
+                        <div class="footer-slogan">Fundraising eXchange <br> Together To Success</div>
+                    </div>
+                </div>
+                
+                <!-- Menu -->
+                <div class="col-lg-3 col-md-6 footer-section">
+                    <h5>Về chúng tôi</h5>
+                    <div class="footer-menu">
+                        <ul>
+                            <li><a href="#">Menu</a></li>
+                            <li><a href="#">Menu</a></li>
+                            <li><a href="#">Menu</a></li>
+                            <li><a href="#">Menu</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="col-lg-3 col-md-6 footer-section">
+                    <h5>Thông tin liên hệ</h5>
+                    <div class="footer-contact">
+                        <p><strong>Hotline:</strong> 035 510 8888</p>
+                        <p><strong>Email:</strong> example@gmail.com</p>
+                        <p><strong>Địa chỉ:</strong> 135 Pasteur, P. Võ Thị Sáu, Q.3, TP. Hồ Chí Minh</p>
+                    </div>
+                    <div class="footer-social mt-3">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Download App -->
+                <div class="col-lg-3 col-md-6 footer-section">
+                    <h5>Download App</h5>
+                    <div class="footer-download">
+                        <a href="#"><img src="https://cdn-icons-png.freepik.com/256/2504/2504916.png?ga=GA1.1.1401665435.1741148428&semt=ais_hybrid" alt="Google Play"></a>
+                        <br>
+                        <a href="#"><img src="https://cdn-icons-png.freepik.com/256/5977/5977575.png?ga=GA1.1.1401665435.1741148428&semt=ais_hybrid" alt="App Store"></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="row">
+                <div class="col-md-12 text-center footer-copyright">
+                    <p>Copyright © 2023 Bondy. All rights reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script async defer src="https://www.uchat.com.au/js/widget/knvcidogttiuekfe/float.js"></script>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    
+    <!-- Script Section -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Animation on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const serviceItems = document.querySelectorAll('.service-item, .model-card, .benefit-box');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            serviceItems.forEach(item => {
+                item.style.opacity = 0;
+                item.style.transform = 'translateY(20px)';
+                item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(item);
+            });
+        });
+    </script>
+</body>
+</html>
