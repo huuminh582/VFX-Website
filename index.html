@@ -350,7 +350,8 @@
             margin-bottom: 30px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             /* background-image: url(https://img.freepik.com/free-photo/futuristic-technology-concept_23-2151908068.jpg?ga=GA1.1.1401665435.1741148428&semt=ais_hybrid&w=740); */
-            background-image: url(./img/index/backgroundVFX.jpg);
+            /* background-image: url(./img/index/backgroundVFX.jpg); */
+            background-image: url(./img/index/section1img.jfif);
             background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1264,11 +1265,15 @@
             display: flex;
             justify-content: center;
             align-items: center;
+             
+            
         }
 
         .tech-card-icon img {
             width: 100%;
-            height: auto;
+            height: 100%;
+            
+            object-fit: cover;
         }
 
         .tech-card-title {
@@ -1348,11 +1353,74 @@
             }
         }
 
+
+        /* news section */
+        /* CSS cho section Tin tức */
+#news {
+    background-color: #027A5614;
+}
+
+#news .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 15px;
+}
+#news .section-title {
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+#news .card {
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#news .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+#news .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+#news .badge {
+    font-weight: 500;
+}
+
+#news .btn-outline-success {
+    border-color: #28a745;
+    color: #28a745;
+}
+
+#news .btn-outline-success:hover {
+    background-color: #28a745;
+    color: white;
+}
+
+#news .btn-warning {
+    background: linear-gradient(to right, rgba(244, 213, 80, 1), rgba(178, 120, 13, 1));
+    border-color: #ffc107;
+    color: white;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 30px;
+}
+
+#news .btn-warning:hover {
+    background-color: #e0a800;
+    border-color: #e0a800;
+    transform: translateY(-5px);
+}
+
+
         /* Strategic Partners Section */
         .partners-section {
             padding: 40px 0;
-            border-top: 0.5px solid #e5e5e5;
-            border-bottom: 1px solid #e5e5e5;
+            border-top: 1.5px solid #e5e5e5;
+
             max-width: 1200px;
             margin: 0 auto;
             
@@ -1546,6 +1614,7 @@
             justify-content: center;
             color: white;
             transition: all 0.3s ease;
+            text-decoration: none;
         }
 
         .footer-social a:hover {
@@ -1636,11 +1705,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="about.html">Đội Ngũ</a>
                         </li>
+                        
                         <li class="nav-item">
-                            <a class="nav-link" href="">Dịch Vụ</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="">Dự Án</a>
+                            <a class="nav-link" href="AI.html">VFX AI</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="">Tin Tức</a>
@@ -1997,7 +2064,7 @@
                         <!-- Portfolio Card 1 -->
                         <div class="portfolio-card">
                             <div class="portfolio-card-image">
-                                <img src="https://i.pinimg.com/736x/dc/ff/a8/dcffa82fafd44f1e8a16e4c65c181b93.jpg" alt="Private">
+                                <img src="./img/index/section-6-a.jpg" alt="Private">
                                 <div class="portfolio-overlay">
                                     <a href="portfolio-detail.html" class="btn rounded-pill">Xem chi tiết</a>
                                 </div>
@@ -2011,7 +2078,7 @@
                         <!-- Portfolio Card 2 -->
                         <div class="portfolio-card">
                             <div class="portfolio-card-image">
-                                <img src="https://i.pinimg.com/736x/44/69/a2/4469a20f666a2d57c734cc9600cc1e60.jpg" alt="Fundraising Premium">
+                                <img src="./img/index/section-6-b.jpg" alt="Fundraising Premium">
                                 <div class="portfolio-overlay">
                                     <a href="portfolio-detail.html" class="btn rounded-pill">Xem chi tiết</a>
                                 </div>
@@ -2025,7 +2092,7 @@
                         <!-- Portfolio Card 3 -->
                         <div class="portfolio-card">
                             <div class="portfolio-card-image">
-                                <img src="https://i.pinimg.com/736x/e1/c1/56/e1c156223f1a32a0b0a445157998c27e.jpg" alt="Community Fundraising">
+                                <img src="./img/index/section-6-c.jpg" alt="Community Fundraising">
                                 <div class="portfolio-overlay">
                                     <a href="portfolio-detail.html" class="btn rounded-pill">Xem chi tiết</a>
                                 </div>
@@ -2039,7 +2106,7 @@
                         <!-- Portfolio Card 4 -->
                         <div class="portfolio-card">
                             <div class="portfolio-card-image">
-                                <img src="https://i.pinimg.com/736x/d7/1b/44/d71b44ff60fe789d152b96fc93164623.jpg" alt="Fundraising eXchange">
+                                <img src="./img/index/section-6-d.jpg" alt="Fundraising eXchange">
                                 <div class="portfolio-overlay">
                                     <a href="portfolio-detail.html" class="btn rounded-pill">Xem chi tiết</a>
                                 </div>
@@ -2251,7 +2318,7 @@
                     <!-- Tech Card 1 -->
                     <div class="tech-card">
                         <div class="tech-card-icon">
-                            <img src="https://cdn-icons-png.freepik.com/256/1190/1190773.png?ga=GA1.1.1401665435.1741148428&semt=ais_hybrid" alt="Blockchain">
+                            <img src="./img/index/blockchain.png" alt="Blockchain">
                         </div>
                         <h3 class="tech-card-title">Blockchain / NFT</h3>
                         <p class="tech-card-description">
@@ -2262,7 +2329,7 @@
                     <!-- Tech Card 2 -->
                     <div class="tech-card">
                         <div class="tech-card-icon">
-                            <img src="https://cdn-icons-png.freepik.com/256/6774/6774969.png?ga=GA1.1.1401665435.1741148428&semt=ais_hybrid" alt="AI">
+                            <img src="./img/index/smart_contract.png" alt="AI">
                         </div>
                         <h3 class="tech-card-title">Smart Contract</h3>
                         <p class="tech-card-description">
@@ -2273,7 +2340,7 @@
                     <!-- Tech Card 3 -->
                     <div class="tech-card">
                         <div class="tech-card-icon">
-                            <img src="https://cdn-icons-png.freepik.com/256/16136/16136673.png?ga=GA1.1.1401665435.1741148428&semt=ais_hybrid" alt="Big Data">
+                            <img src="./img/index/Fintech.png" alt="Big Data">
                         </div>
                         <h3 class="tech-card-title">Fintech</h3>
                         <p class="tech-card-description">
@@ -2284,7 +2351,7 @@
                     <!-- Tech Card 4 -->
                     <div class="tech-card">
                         <div class="tech-card-icon">
-                            <img src="https://cdn-icons-png.flaticon.com/512/2103/2103607.png" alt="Cloud Computing">
+                            <img src="./img/index/AI.png" alt="Cloud Computing">
                         </div>
                         <h3 class="tech-card-title">AI</h3>
                         <p class="tech-card-description">
@@ -2295,7 +2362,7 @@
                     <!-- Tech Card 5 -->
                     <div class="tech-card">
                         <div class="tech-card-icon">
-                            <img src="https://cdn-icons-png.freepik.com/256/9692/9692772.png?ga=GA1.1.1401665435.1741148428&semt=ais_hybrid" alt="Security">
+                            <img src="./img/index/big_data.png" alt="Security">
                         </div>
                         <h3 class="tech-card-title">Big Data</h3>
                         <p class="tech-card-description">
@@ -2306,7 +2373,7 @@
                     <!-- Tech Card 6 -->
                     <div class="tech-card">
                         <div class="tech-card-icon">
-                            <img src="https://cdn-icons-png.flaticon.com/512/2092/2092757.png" alt="Automation">
+                            <img src="./img/index/security.png" alt="Automation">
                         </div>
                         <h3 class="tech-card-title">Bảo Mật Và Mã Hóa</h3>
                         <p class="tech-card-description">
@@ -2316,6 +2383,75 @@
                 </div>
             </div>
         </section>
+
+        <!-- news Section -->
+         <!-- Section Tin tức -->
+<section id="news" class="py-5">
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col-12 text-center">
+                <h2 class="section-title position-relative">Tin tức & Blog kiến thức Fintech</h2>
+                <div class="title-border mx-auto"></div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <!-- Tin tức 1 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1470&auto=format&fit=crop" alt="Thị trường Fintech" class="card-img-top">
+                    <div class="card-body p-4">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="badge bg-success rounded-pill px-3 py-2">Thị trường</span>
+                            <small class="text-muted"><i class="far fa-calendar-alt me-1"></i> 15/04/2025</small>
+                        </div>
+                        <h5 class="card-title fw-bold">Thị trường Fintech Việt Nam tăng trưởng 35% trong năm 2025</h5>
+                        <p class="card-text text-muted">Báo cáo mới nhất chỉ ra sự phát triển vượt bậc của ngành công nghệ tài chính Việt Nam với tổng giá trị giao dịch đạt 14 tỷ USD.</p>
+                        <a href="#" class="btn btn-outline-success btn-sm">Đọc tiếp</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tin tức 2 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?q=80&w=1470&auto=format&fit=crop" alt="Xu hướng Fintech" class="card-img-top">
+                    <div class="card-body p-4">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="badge bg-success rounded-pill px-3 py-2">Xu hướng</span>
+                            <small class="text-muted"><i class="far fa-calendar-alt me-1"></i> 02/04/2025</small>
+                        </div>
+                        <h5 class="card-title fw-bold">5 xu hướng công nghệ tài chính sẽ thống trị năm 2025</h5>
+                        <p class="card-text text-muted">Từ thanh toán không tiếp xúc đến ngân hàng embedded, những xu hướng fintech nào sẽ thay đổi ngành tài chính?</p>
+                        <a href="#" class="btn btn-outline-success btn-sm">Đọc tiếp</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tin tức 3 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1559067096-49ebca3406aa?q=80&w=1528&auto=format&fit=crop" alt="Startup Payment Vietnam" class="card-img-top">
+                    <div class="card-body p-4">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="badge bg-success rounded-pill px-3 py-2">Gọi vốn</span>
+                            <small class="text-muted"><i class="far fa-calendar-alt me-1"></i> 28/03/2025</small>
+                        </div>
+                        <h5 class="card-title fw-bold">Startup Payment Vietnam gọi vốn thành công 2 triệu USD</h5>
+                        <p class="card-text text-muted">Vòng gọi vốn Series A của startup thanh toán Việt Nam kết thúc với sự tham gia của nhiều quỹ đầu tư nước ngoài.</p>
+                        <a href="#" class="btn btn-outline-success btn-sm">Đọc tiếp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-4">
+            <div class="col-12 text-center">
+                <a href="#" class="btn btn-warning px-4 py-2">Xem tất cả bài viết</a>
+            </div>
+        </div>
+    </div>
+</section>
 
         <!-- Strategic Partners Section -->
         <section class="partners-section">
@@ -2487,7 +2623,30 @@
             this.style.animationPlayState = 'running';
         });
 
+        //news section
+        // JavaScript để thay thế hình ảnh placeholder bằng hình ảnh thực tế từ mẫu
+document.addEventListener("DOMContentLoaded", function() {
+    // Hình ảnh thực tế cho các bài viết tin tức (từ mẫu của bạn)
+    const newsImages = [
+        "URL_HINH_THI_TRUONG",  // URL hình thị trường Fintech
+        "URL_HINH_XU_HUONG",    // URL hình xu hướng công nghệ tài chính
+        "URL_HINH_GOI_VON"      // URL hình startup gọi vốn
+    ];
+    
+    // Thay thế các placeholder images khi chúng được tải
+    const cardImages = document.querySelectorAll("#news .card-img-top");
+    
+    // Chỉ thay thế nếu có URL thực tế
+    cardImages.forEach((img, index) => {
+        if (newsImages[index] && newsImages[index] !== "URL_HINH_THI_TRUONG" && 
+            newsImages[index] !== "URL_HINH_XU_HUONG" && newsImages[index] !== "URL_HINH_GOI_VON") {
+            img.src = newsImages[index];
+        }
+    });
+});
 
+// Bạn có thể thêm tính năng đếm ngược thời gian cho các bài viết mới
+// hoặc các tính năng khác cho phần tin tức tại đây
         
     </script>
 </body>
