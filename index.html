@@ -25,7 +25,7 @@
 }
 
 /* Container bên trong vẫn giữ kích thước nhỏ gọn */
-.value-section .container, .about-section .container, .vfx-section .container, .fundraising-section .container, .product-service-section .container {
+.value-section .container, .vfx-section .container, .fundraising-section .container, .product-service-section .container {
     max-width: 1100px;
     margin: 0 auto;
 }
@@ -479,6 +479,11 @@
             background-color: #027A5614;
         }
         
+        .about-section .container{
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
         .about-heading {
             color: black !important;
             font-weight: bold;
@@ -545,64 +550,84 @@
         /* tuyên bố giá trị Styles */
 
         .value-section {
-            /* background: linear-gradient(to right, #e6f3eb, #ffffff); */
-            padding: 20px 0;
-            
+            position: relative;
+            padding: 60px 0;
+            overflow: hidden;
         }
 
+        .value-section .container{
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .bg-decoration2 {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, rgba(255, 236, 179, 0.2), rgba(255, 236, 179, 0));
+            border-radius: 50%;
+            z-index: -1;
+        }
+        
+        /* Title Styles */
         .section-title {
-            display: block;
-            width: fit-content;
-            padding: 8px 25px;
-            border: none;
-            border-radius: 30px;
-            margin: 0 auto 20px;
-            font-size: 0.8rem;
             color: white !important;
-            /* background-color: #F2C94C; */
-            background: linear-gradient(to right, rgba(244, 213, 80, 1), rgba(178, 120, 13, 1));
-            font-family: 'Times New Roman', Times, serif;
-            text-align: center;
-            box-shadow: 0 2px 6px rgba(242, 201, 76, 0.2);
-            transition: transform 0.3s ease;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
         }
         
         .main-title {
-            color: #045a3d !important;
-            text-align: center;
+            font-size: 2.2rem;
             font-weight: 700;
-            font-size: 2.0rem;
-            margin-bottom: 0.5rem;
-            position: relative;
-            
+            margin-bottom: 20px;
+            color: white;
         }
-
+        
         .vision-description {
-            text-align: center;
-            margin-bottom: 5.0rem !important;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+            font-size: 1.1rem;
             line-height: 1.6;
-            color: #333;
-            
-            font-size: 1.2rem;
+            max-width: 800px;
+            margin-bottom: 40px;
         }
-
- 
-        .value-card {
-            /* background: linear-gradient(to right, #e6f3eb, #ffffff); */
+        
+        /* Image Styles */
+        .value-image {
+            position: relative;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.01);
-            padding: 2rem;
-            margin-bottom: 2rem;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             height: 100%;
-            gap: 2rem;
-            
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.01);
+            min-height: 300px;
+        }
+        
+        .value-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Content Card Styles */
+        .value-card {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
         
         .value-card-title {
+            /* color: #e6b038;
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-size: 1.8rem; */
+
             display: block;
             width: fit-content;
             padding: 8px 25px;
@@ -618,104 +643,96 @@
             transition: transform 0.3s ease;
             margin: 0 auto;  /* Thêm dòng này thay cho margin-left và margin-right */
             margin-bottom: 40px;
-            
         }
         
-    
         .value-card-description {
-            color: #333 !important;
-            line-height: 1.6;
             font-size: 1.1rem;
+            line-height: 1.7;
+            color: #000;
             text-align: justify;
-            
         }
         
-        .value-image {
-            width: 100%;
-            border-radius: 8px;
-            overflow: hidden;
-            margin-bottom: 1rem;
-            margin-right: 30px;
-        }
-        
-        .value-image img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-        }
-        
+        /* Core Values Grid */
         .values-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-top: 3rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
         }
         
         .core-value {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
             text-align: center;
-            padding: 1.5rem;
-            /* background: linear-gradient(to right, #e6f3eb, #ffffff); */
-            border: 1px solid #F2C94C;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
-            border-radius: 18px;
-            background-color: white;
-            flex: 1;
-            min-width: 200px;
-            max-width: 250px;
+            transition: transform 0.3s;
+        }
+        
+        .core-value:hover {
+            transform: translateY(-5px);
         }
         
         .core-value-icon {
-            width: 50px;
-            height: 50px;
-            margin: 0 auto 1rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 20px;
         }
         
         .core-value-icon img {
             width: 100%;
-            height: auto;
+            height: 100%;
+            object-fit: contain;
         }
         
         .core-value-title {
-            font-weight: bold;
-            margin-bottom: 1.5rem;
-            color: black;
-            text-decoration-line: underline;
-            text-decoration-color: gray;         /* Màu của gạch chân */
-            text-decoration-thickness: 0.2px;
-            text-underline-offset: 10px; /* Điều chỉnh khoảng cách ở đây */
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #000;
         }
         
         .core-value-description {
-            font-size: 1.1rem;
-            color: #333;
+            font-size: 0.95rem;
             line-height: 1.5;
+            color: #333;
         }
         
-        @media (max-width: 991px) {
+        /* Custom Vertical Divider */
+        .vertical-divider {
+            width: 1px;
+            background: linear-gradient(180deg, #f8c146, #e6a11f);
+            border-radius: 2px;
+            margin: 0 15px;
+            
+        }
+        
+        /* Fixed Height Row */
+        .fixed-height-row {
+            min-height: 400px;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 991.98px) {
+            .order-swap {
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .order-swap .order-lg-2 {
+                order: 1;
+            }
+            
+            .order-swap .order-lg-1 {
+                order: 2;
+            }
+            
+            .value-image {
+                min-height: 250px;
+                margin-bottom: 20px;
+            }
+            
             .value-card {
-                margin-bottom: 2rem;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .main-title {
-                font-size: 1.5rem;
-            }
-
-            .section-title{
-                font-size: 0.8rem;
-            }
-            
-            .values-grid {
-                gap: 1rem;
-            }
-            
-            .core-value {
-                min-width: 160px;
+                padding: 20px;
             }
         }
 
@@ -890,6 +907,13 @@
             padding: 60px 0;
         }
         
+        .investor-benefits .container .main-title{
+            color: black;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 3.5rem;
+            margin: 0 auto;
+        }
         .section-title {
             display: block;
             width: fit-content;
@@ -975,7 +999,7 @@
         }
         
         /* Decorative background */
-        .bg-decoration {
+        .bg-decoration1 {
             position: absolute;
             top: 0;
             right: 0;
@@ -1757,7 +1781,7 @@
 
             <!-- VFX Section -->
             <section class="vfx-section">
-                <div class="bg-decoration"></div>
+                <div class="bg-decoration2"></div>
                 <div class="container">
                     <div class="text-center mb-5">
                         <div class="greeting1">VFX</div>
@@ -1945,101 +1969,117 @@
 
 
             <!-- Tuyên bố giá trị Section -->
-            <section class="value-section">
-                <div class="bg-decoration"></div>
-                <div class="container py-5">
-                <div class="row">
-                    <div class="col-12">
-                        <h6 class="section-title text-uppercase">TUYÊN BỐ GIÁ TRỊ</h6>
-                        <h2 class="main-title">" Together To Success <br> Cùng nhau thành công "</h2>
-                        <p class="vision-description">
-                            Chúng tôi cam kết xây dựng một nền tảng góp vốn chuyên nghiệp, minh bạch và hiệu quả, đồng hành
-                            cùng sự phát triển của cộng đồng khởi nghiệp Việt Nam.
+    <section class="value-section">
+        <div class="bg-decoration1"></div>
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h6 class="section-title text-uppercase">TUYÊN BỐ GIÁ TRỊ</h6>
+                    <h2 class="main-title">" Together To Success <br> Cùng nhau thành công "</h2>
+                    <p class="vision-description mx-auto">
+                        Chúng tôi cam kết xây dựng một nền tảng góp vốn chuyên nghiệp, minh bạch và hiệu quả, đồng hành
+                        cùng sự phát triển của cộng đồng khởi nghiệp Việt Nam.
+                    </p>
+                </div>
+            </div>
+    
+            <!-- Tầm nhìn - FIXED 2 Column Layout -->
+            <div class="row align-items-stretch fixed-height-row mb-5">
+                <div class="col-lg-6 mb-4 mb-lg-0 d-flex">
+                    <div class="value-image w-100">
+                        <img src="https://img.freepik.com/free-photo/3d-rendering-abstract-cube-floating-nature_23-2150979685.jpg?uid=R190145188&ga=GA1.1.1401665435.1741148428&semt=ais_hybrid&w=740" alt="Tầm nhìn">
+                    </div>
+                </div>
+                
+                <!-- Optional Vertical Divider -->
+                <div class="col-auto d-none d-lg-flex ">
+                    <div class="vertical-divider h-100"></div>
+                </div>
+                
+                <div class="col-lg-5 d-flex">
+                    <div class="value-card w-100">
+                        <h4 class="value-card-title">Tầm Nhìn</h4>
+                        <p class="value-card-description">
+                            Trở thành đơn vị tiên phong trong hoạt
+                            động gọi vốn và giao dịch vốn cho khởi
+                            nghiệp, doanh nghiệp hướng tới phát
+                            triển bền vững. Kiến tạo dòng vốn đầu tư
+                            bền vững hàng đầu Việt Nam & Khu Vực.
                         </p>
                     </div>
                 </div>
-        
-                <div class="row align-items-center mb-5">
-                    <div class="col-lg-6 mb-4 mb-lg-0">
-                        <div class="value-image">
-                            <img src="https://i.pinimg.com/736x/96/3d/7d/963d7d27ef56c563c700e0521db4dc68.jpg" alt="Tầm nhìn">
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="value-card">
-                            <h4 class="value-card-title">Tầm Nhìn</h4>
-                            <!-- <h3 class="value-card-subtitle">Trở thành nền tảng góp vốn hàng đầu Việt Nam</h3> -->
-                            <p class="value-card-description">
-                                Trở thành đơn vị tiên phong trong hoạt
-                                động gọi vốn và giao dịch vốn cho khởi
-                                nghiệp, doanh nghiệp hướng tới phát
-                                triển bền vững. Kiến tạo dòng vốn đầu tư
-                                bền vững hàng đầu Việt Nam & Khu Vực.
-                            </p>
-                        </div>
+            </div>
+    
+            <!-- Sứ mệnh - FIXED 2 Column Layout -->
+            <div class="row align-items-stretch fixed-height-row mb-5">
+                <div class="col-lg-5 d-flex">
+                    <div class="value-card w-100">
+                        <h4 class="value-card-title">Sứ Mệnh</h4>
+                        <p class="value-card-description">
+                            Giải quyết nhu cầu tài chính cho dự
+                            án, khởi nghiệp, doanh nghiệp nhằm
+                            thúc đẩy sự phát triển hướng tới
+                            phát triển bền vững.<br><br>
+                            Tiên phong phát triển hệ sinh thái
+                            đầu tư bền vững, đa dạng hóa và gia
+                            tăng hiệu quả các danh mục đầu tư
+                            cho nhà đầu tư cá nhân và tổ chức.
+                        </p>
                     </div>
                 </div>
-        
-                <div class="row align-items-center">
-                    <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
-                        <div class="value-image">
-                            <img src="https://i.pinimg.com/736x/8a/56/02/8a560224deb64278612ef40909abc8a1.jpg" alt="Sứ mệnh">
-                        </div>
-                    </div>
-                    <div class="col-lg-6 order-lg-1">
-                        <div class="value-card">
-                            <h4 class="value-card-title">Sứ Mệnh</h4>
-                            <!-- <h3 class="value-card-subtitle">Kiến tạo hệ sinh thái đầu tư bền vững</h3> -->
-                            <p class="value-card-description">
-                                Giải quyết nhu cầu tài chính cho dự án, khởi nghiệp, doanh nghiệp nhằm thúc đẩy sự phát triển hướng tới phát triển bền vững.
-                            </p>
-                            <p class="value-card-description">
-                                Tiên phong phát triển hệ sinh thái
-                                đầu tư bền vững, đa dạng hóa và gia
-                                tăng hiệu quả các danh mục đầu tư
-                                cho nhà đầu tư cá nhân và tổ chức.
-                            </p>
-                        </div>
+                
+                <!-- Optional Vertical Divider -->
+                <div class="col-auto d-none d-lg-flex ">
+                    <div class="vertical-divider h-100"></div>
+                </div>
+                
+                <div class="col-lg-6 mb-4 mb-lg-0 d-flex">
+                    <div class="value-image w-100">
+                        <img src="https://img.freepik.com/premium-photo/blockchain-technology-big-data-neural-network-blocks-artificial-intelligence-training-hitech_99433-10818.jpg?uid=R190145188&ga=GA1.1.1401665435.1741148428&semt=ais_hybrid&w=740" alt="Tầm nhìn">
                     </div>
                 </div>
-        
-                <div class="values-grid">
-                    <div class="core-value">
-                        <div class="core-value-icon">
-                            <img src="https://cdn-icons-png.freepik.com/256/3264/3264323.png?ga=GA1.1.1401665435.1741148428&semt=ais_hybrid" alt="Thấu Hiểu">
-                        </div>
-                        <h5 class="core-value-title">Thấu Hiểu</h5>
-                        <p class="core-value-description">Thấu hiểu nhu cầu của
-                            khách hàng, đối tác để 
-                           phục vụ tốt nhất.</p>
+                
+            </div>
+    
+            <!-- Core Values Grid -->
+            <div class="values-grid">
+                <div class="core-value">
+                    <div class="core-value-icon">
+                        <img src="/api/placeholder/70/70" alt="Thấu Hiểu">
                     </div>
-                    <div class="core-value">
-                        <div class="core-value-icon">
-                            <img src="https://cdn-icons-png.freepik.com/256/735/735757.png?ga=GA1.1.1401665435.1741148428&semt=ais_hybrid" alt="Hiệu Quả">
-                        </div>
-                        <h5 class="core-value-title">Hiệu Quả</h5>
-                        <p class="core-value-description">Hiệu quả sử dụng vốn và
-                            đầu tư tối ưu.</p>
+                    <h5 class="core-value-title">Thấu Hiểu</h5>
+                    <p class="core-value-description">Thấu hiểu nhu cầu của
+                        khách hàng, đối tác để 
+                        phục vụ tốt nhất.</p>
+                </div>
+                <div class="core-value">
+                    <div class="core-value-icon">
+                        <img src="/api/placeholder/70/70" alt="Hiệu Quả">
                     </div>
-                    <div class="core-value">
-                        <div class="core-value-icon">
-                            <img src="https://cdn-icons-png.freepik.com/256/1705/1705315.png?ga=GA1.1.1401665435.1741148428&semt=ais_hybrid" alt="Minh Bạch">
-                        </div>
-                        <h5 class="core-value-title">Minh Bạch</h5>
-                        <p class="core-value-description">Rõ ràng, minh bạch thông tin, dữ liệu.</p>
+                    <h5 class="core-value-title">Hiệu Quả</h5>
+                    <p class="core-value-description">Hiệu quả sử dụng vốn và
+                        đầu tư tối ưu.</p>
+                </div>
+                <div class="core-value">
+                    <div class="core-value-icon">
+                        <img src="/api/placeholder/70/70" alt="Minh Bạch">
                     </div>
-                    <div class="core-value">
-                        <div class="core-value-icon">
-                            <img src="https://cdn-icons-png.freepik.com/256/15401/15401099.png?ga=GA1.1.1401665435.1741148428&semt=ais_hybrid" alt="Trách Nhiệm">
-                        </div>
-                        <h5 class="core-value-title">Trách Nhiệm</h5>
-                        <p class="core-value-description">Trách nhiệm hỗ trợ vốn cho
-                            khởi nghiệp và quản lý vốn
-                            cho nhà đầu tư.</p>
+                    <h5 class="core-value-title">Minh Bạch</h5>
+                    <p class="core-value-description">Rõ ràng, minh bạch thông tin, dữ liệu.</p>
+                </div>
+                <div class="core-value">
+                    <div class="core-value-icon">
+                        <img src="/api/placeholder/70/70" alt="Trách Nhiệm">
                     </div>
+                    <h5 class="core-value-title">Trách Nhiệm</h5>
+                    <p class="core-value-description">Trách nhiệm hỗ trợ vốn cho
+                        khởi nghiệp và quản lý vốn
+                        cho nhà đầu tư.</p>
                 </div>
             </div>
-            </section>
+        </div>
+        
+    </section>
 
             <!-- Hình thức gọi vốn Section -->
             <section class="portfolio-section">
@@ -2128,12 +2168,15 @@
 
             <!-- Benefit section -->
             <section class="investor-benefits">
-                <div class="bg-decoration"></div>
+                <div class="bg-decoration2"></div>
                 <div class="container">
-                    <div class="section-title">
-                        <h2>Lợi Ích</h2>   
+                    <div class="row">
+                        <div class="col-12 text-center mb-5">
+                            <h6 class="section-title text-uppercase">Lợi Ích</h6>
+                            <h2 class="main-title">Lợi Ích Cho Nhà Đầu Tư</h2>
+                            
+                        </div>
                     </div>
-                    <h2 class="main-title">Lợi ích cho nhà đầu tư</h2>
                     
                     <div class="benefits-container">
                         <div class="benefit-item">
@@ -2302,7 +2345,7 @@
 
         <!-- Công Nghệ Section -->
         <section class="technology-section">
-            <div class="bg-decoration"></div>
+            <div class="bg-decoration1"></div>
             <div class="container py-5">
                 <div class="row">
                     <div class="col-12 text-center mb-5">
@@ -2482,7 +2525,7 @@
                         
                         <!-- Nhân đôi logo để tạo hiệu ứng liên tục -->
                         <div class="partner-logo">
-                            <img src="https://cdn.metadap.io/assets/1fbeaa9e-7f68-44f4-adc2-33711edfa87b/zubhd8b245nxja6ekmmz.svg" alt="VIFM" />
+                            <img src="./img/doi_tac_chien_luoc/nttu-en.svg" alt="VIFM" />
                         </div>
                         <div class="partner-logo">
                             <img src="https://cdn.metadap.io/assets/14074e39-fd2c-4bba-ad65-e140795a8f15/epvhhizanli3s5uimn4r.svg" alt="Investpush Legal" />
