@@ -8,6 +8,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./components/footer.html">
     <style>
         
 
@@ -475,8 +477,8 @@
         /* History Section Styles */
         .about-section {
             padding: 80px 0;
-            /* background-color: #f9f9f9; */
-            background-color: #027A5614;
+            /* background-color: #027A5614; */
+            background: linear-gradient(to right, #f0fff4, #ffffff);
         }
         
         .about-section .container{
@@ -513,7 +515,7 @@
             align-items: center;
             color: #000;
             font-weight: bold;
-            
+            font-size: 1.0rem;
         }
         
         .feature-icon {
@@ -538,7 +540,7 @@
         }
         
         .about-description {
-            font-size: 16px;
+            font-size: 1.0rem;
             line-height: 1.7;
             color: #333 !important;
             margin-bottom: 25px;
@@ -615,13 +617,12 @@
             /* background: linear-gradient(to bottom right, #ffffff, #027A5614); */
             background: linear-gradient(to bottom, #f0fff4, #ffffff);
             padding: 30px;
-            border-radius: 10px;
+            border-radius: 30px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.01);
             height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            
         }
         
         .value-card-title {
@@ -665,10 +666,12 @@
         .core-value {
             background-color: #fff;
             padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            border-radius: 30px;
             text-align: center;
-            transition: transform 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            border: 1.5px solid #d8b450;
+            border-top: 10px solid #d8b450;
         }
         
         .core-value:hover {
@@ -694,9 +697,10 @@
         }
         
         .core-value-description {
-            font-size: 0.95rem;
+            font-size: 1.0rem;
             line-height: 1.5;
-            color: #333;
+            color: #000;
+            text-align: center;
         }
         
         /* Custom Vertical Divider */
@@ -745,7 +749,8 @@
             position: relative;
             width: 100%;
             padding: 60px 0;
-            background-color: #027A5614;
+            /* background-color: #027A5614; */
+            background: linear-gradient(to left, #f0fff4, #ffffff);
         }
 
         .portfolio-section .container {
@@ -799,8 +804,10 @@
         background-color: #fff;
         border-radius: 8px;
         overflow: hidden;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1.5px solid #d8b450;
+            
     }
 
     /* .portfolio-card:hover {
@@ -959,6 +966,7 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.3);
             transition: all 0.3s ease;
             border: 1.5px solid #d8b450;
+            border-top: 10px solid #d8b450 ;
         }
         
         .benefit-icon {
@@ -1075,7 +1083,8 @@
         position: relative;
             width: 100%;
             padding: 60px 0;
-            background-color: #027A5614;
+            /* background-color: #027A5614; */
+            background: linear-gradient(to right, #f0fff4, #ffffff);
     }
     
     .section-title {
@@ -1132,10 +1141,11 @@
         /* background: linear-gradient(to bottom, #e7d7ab 0%, #cfcccc 100%);  */
         border-radius: 50px;
         height: calc(100% - 70px);
-        border: 1.5px solid #d8b450;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-        background: linear-gradient(to bottom, #e0f7f1, #ffffff);
-
+        /* border: 1.5px solid #d8b450; */
+        box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        /* background: linear-gradient(to bottom, #e0f7f1, #ffffff); */
+        background-color: white;
+        border-top: 10px solid #d8b450 ;
 
     }
     
@@ -1239,6 +1249,7 @@
             max-width: 1100px;
             margin: 0 auto;
             padding: 0 15px;
+            
         }
 
         .technology-section .section-title {
@@ -1271,7 +1282,7 @@
             background: white;
             border: 1.5px solid #d8b450;
             border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
             padding: 20px;
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1279,7 +1290,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            
+            border-top: 10px solid #d8b450 ;
         }
 
         .tech-card:hover {
@@ -1386,7 +1397,7 @@
         /* news section */
         /* CSS cho section Tin tức */
 #news {
-    background: linear-gradient(to bottom, #f0fff4, #ffffff);
+    background: linear-gradient(to right, #f0fff4, #ffffff);
     margin-bottom: 50px;
 }
 
@@ -1404,6 +1415,7 @@
     transition: all 0.3s ease;
     border-radius: 8px;
     overflow: hidden;
+    
 }
 
 #news .card:hover {
@@ -1446,15 +1458,52 @@
     transform: translateY(-5px);
 }
 
+/* ====================== CTA SECTION STYLES ====================== */
+.cta-section {
+     background: linear-gradient(135deg, #f5b53f, #f09819) !important; 
+    /* background-color: #d8b450 !important; */
+    padding: 60px 0;
+    border-top-left-radius: 70px;
+    border-bottom-right-radius: 70px; 
+    
+}
+
+.cta-section h2 {
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.cta-section p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    color: white;
+}
+
+.cta-section .btn-light {
+    color: #f09819;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 12px 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+}
+
+.cta-section .btn-light:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(135deg, #f5b53f, #f09819);
+    color: white;
+    
+}
 
 /* Strategic Partners Section */
         .partners-section {
             padding: 40px 0;
-            border-top: 1.5px solid #e5e5e5;
-            
             max-width: 1200px;
             margin: 0 auto;
-            
             overflow: hidden;
             position: relative;
         }
@@ -1549,171 +1598,37 @@
         }
 
 
-        /* Footer Styles */
-        .footer {
-            /* background-color:#012D21; */
-            background: linear-gradient(to bottom, rgba(244, 213, 80, 1), rgba(178, 120, 13, 1));
-            color: white;
-            padding: 40px 0 20px;
-            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5);
-        }
+        /* Dash Line Divider */
+ .dash-divider {
+    height: 1px;
+    background-image: linear-gradient(to right, #e0e0e0 50%, transparent 50%);
+    background-size: 20px 1px;
+    margin: 40px 0;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+} 
+ 
+.divider-container {
+    width: 100%;
+    height: 40px; /* Đủ không gian cho thanh khi xoay */
+    position: relative;
+    margin: 40px 0;
+    overflow: hidden; /* Tùy chọn */
+}
 
-        .footer-container {
-            max-width: 1300px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1.5fr;
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-logo {
-            max-width: 150px;
-            margin-bottom: 20px;
-        }
-
-        .footer-description {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .footer-heading {
-            color: white;
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-
-        .footer-links {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .footer-links li {
-            margin-bottom: 12px;
-            
-        }
-
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            font-size: 1.1rem;
-            transition: color 0.3s ease;
-            margin-left: 30px;
-        }
-
-        .footer-links a:hover {
-            color: var(--light-gold);
-        }
-
-        .footer-contact {
-            margin-bottom: 15px;
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            margin-right: 30px;
-        }
-
-        .footer-contact i {
-            color: white;
-            font-size: 1.1rem;
-            margin-top: 4px;
-        }
-
-        .footer-contact-text {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 1.0rem;
-            line-height: 1.6;
-            text-align: justify;
-        }
-
-        .footer-social {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .footer-social a {
-            width: 35px;
-            height: 35px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
-
-        .footer-social a:hover {
-            background: var(--light-gold);
-            color: var(--dark-green);
-            transform: translateY(-3px);
-        }
-
-        .footer-app-downloads {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .app-download-btn {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            background: white;
-            padding: 8px 15px;
-            border-radius: 8px;
-            text-decoration: none;
-            color: black;
-            transition: all 0.3s ease;
-            
-        }
-
-        .app-download-btn:hover {
-            background: var(--light-gold);
-            color: var(--dark-green);
-        }
-
-        .app-download-btn img {
-            width: 24px;
-            height: 24px;
-        }
-
-        .footer-copyright {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 991px) {
-            .footer-content {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .footer-content {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-            
-            .footer-app-downloads {
-                flex-direction: row;
-                justify-content: flex-start;
-            }
-        }
-        
+.dash-divider1 {
+    height: 1px;
+    background-image: linear-gradient(to right, #f09819 50%, transparent 50%);
+    background-size: 20px 1px;
+    width: 120%; /* Thêm chiều rộng để đảm bảo phủ toàn bộ khi xoay */
+    position: absolute;
+    top: 50%;
+    left: -10%; /* Kéo ra một chút để đảm bảo phủ toàn bộ */
+    transform: rotate(-6deg); /* Góc nghiêng */
+    transform-origin: center;
+    box-sizing: border-box;
+}
         
 
         
@@ -1919,6 +1834,9 @@
                     </div>
                 </div>
             </section>
+
+            <!-- Section Divider -->
+<div class="dash-divider"></div>
             
             <!-- Lịch sử hình thành Section -->
             <section class="about-section">
@@ -1980,6 +1898,8 @@
                 </div>
             </section>
 
+            <!-- Section Divider -->
+<div class="dash-divider"></div>
 
             <!-- Tuyên bố giá trị Section -->
     <section class="value-section">
@@ -2094,6 +2014,9 @@
         
     </section>
 
+    <!-- Section Divider -->
+<div class="dash-divider"></div>
+
             <!-- Hình thức gọi vốn Section -->
             <section class="portfolio-section">
                 <div class="container py-5">
@@ -2179,6 +2102,9 @@
                 </div>
             </section>
 
+            <!-- Section Divider -->
+<div class="dash-divider"></div>
+
             <!-- Benefit section -->
             <section class="investor-benefits">
                 <div class="bg-decoration2"></div>
@@ -2241,6 +2167,9 @@
                     </div>
                 </div>
             </section>
+
+<!-- Section Divider -->
+<div class="dash-divider"></div>
 
         <!-- Sản Phẩm Dịch Vụ Section -->
 <section class="product-service-section">
@@ -2355,6 +2284,8 @@
     </div>
 </section>
 
+    <!-- Section Divider -->
+    <div class="dash-divider"></div>
 
         <!-- Công Nghệ Section -->
         <section class="technology-section">
@@ -2440,6 +2371,26 @@
             </div>
         </section>
 
+        <!-- CTA Section -->
+<section class="cta-section py-5 bg-primary text-white">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8 animate-on-scroll">
+                <h2 class="mb-3">Bạn đã sẵn sàng để gọi vốn và giao dịch vốn cho khởi nghiệp, doanh nghiệp?</h2>
+                <p class="mb-lg-0">Hãy liên hệ với chúng tôi ngay hôm nay để được tư vấn miễn phí về giải pháp gọi vốn phù hợp.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end animate-on-scroll delay-100">
+                <a href="#contact" class="btn btn-light btn-lg">Liên hệ ngay</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section Divider -->
+<div class="divider-container">
+    <div class="dash-divider1"></div>
+</div>
+
         <!-- news Section -->
          <!-- Section Tin tức -->
 <section id="news" class="py-5">
@@ -2454,7 +2405,7 @@
         <div class="row">
             <!-- Tin tức 1 -->
             <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card h-100 border-0 shadow-sm">
+                <div class="card h-100 border-0  shadow-sm">
                     <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1470&auto=format&fit=crop" alt="Thị trường Fintech" class="card-img-top">
                     <div class="card-body p-4">
                         <div class="d-flex justify-content-between mb-2">
@@ -2508,6 +2459,9 @@
         </div>
     </div>
 </section>
+
+<!-- Section Divider -->
+<div class="dash-divider"></div>
 
         <!-- Strategic Partners Section -->
         <section class="partners-section">
@@ -2566,72 +2520,7 @@
         </main>
 
         <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-content">
-                <!-- Company Info -->
-                <div>
-                    <img src="https://vfx.com.vn/wp-content/uploads/2024/07/Logo-VFX-1-768x768.png" alt="VFX Logo" class="footer-logo">
-                    <p class="footer-description">
-                        VFX - Nền tảng gọi vốn thông minh, kết nối nhà đầu tư với các dự án tiềm năng.
-                    </p>
-                    <div class="footer-social">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-
-                <!-- Menu Links -->
-                <div>
-                    <h4 class="footer-heading">Về chúng tôi</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">Giới thiệu</a></li>
-                        <li><a href="#">Dịch vụ</a></li>
-                        <li><a href="#">Dự án</a></li>
-                        <li><a href="#">Tin tức</a></li>
-                    </ul>
-                </div>
-
-                <!-- Contact Info -->
-                <div>
-                    <h4 class="footer-heading">Thông tin liên hệ</h4>
-                    <div class="footer-contact">
-                        <i class="fas fa-phone"></i>
-                        <p class="footer-contact-text">Hotline: 035 510 8888</p>
-                    </div>
-                    <div class="footer-contact">
-                        <i class="fas fa-envelope"></i>
-                        <p class="footer-contact-text">Email: example@gmail.com</p>
-                    </div>
-                    <div class="footer-contact">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <p class="footer-contact-text">Địa chỉ: 135 Pasteur, P.Võ Thị Sáu, Q.3, TP Hồ Chí Minh</p>
-                    </div>
-                </div>
-
-                <!-- Download Apps -->
-                <div>
-                    <h4 class="footer-heading">Download App</h4>
-                    <div class="footer-app-downloads">
-                        <a href="#" class="app-download-btn">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/App_Store_%28iOS%29.svg/2048px-App_Store_%28iOS%29.svg.png" alt="App Store">
-                            <span>Download on App Store</span>
-                        </a>
-                        <a href="#" class="app-download-btn">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Google_Play_Arrow_logo.svg/1024px-Google_Play_Arrow_logo.svg.png" alt="Google Play">
-                            <span>Download on Google Play</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Copyright -->
-            <div class="footer-copyright">
-                Copyright © 2024 VFX. All rights reserved
-            </div>
-        </div>
-    </footer>
+<div id="footer-placeholder"></div>
 
         <script async defer src="https://www.uchat.com.au/js/widget/knvcidogttiuekfe/float.js"></script>
 
@@ -2701,9 +2590,25 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-// Bạn có thể thêm tính năng đếm ngược thời gian cho các bài viết mới
-// hoặc các tính năng khác cho phần tin tức tại đây
+
+// Javascript để tải các thành phần header và footer từ file HTML khác
+    document.addEventListener('DOMContentLoaded', function() {
+        // Load header component
+        fetch('../components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
         
+        // Load footer component
+        fetch('components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+        
+        // No additional animation needed for simple dividers
+    });    
     </script>
 </body>
 </html>
